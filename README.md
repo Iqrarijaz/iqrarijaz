@@ -21,8 +21,8 @@
  ### ⚙️ &nbsp;GitHub Analytics
 <p align="center">
 <a href="https://github.com/iqrarijaz">
-  <img height="225em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=iqrarijaz&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
-  <img height="225em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=iqrarijaz&layout=compact&langs_count=8&theme=algolia"/>
+  <img height="50%" src="https://github-readme-stats-eight-theta.vercel.app/api?username=iqrarijaz&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
+  <img height="30%" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=iqrarijaz&layout=compact&langs_count=8&theme=algolia"/>
 </a>
 </p>
  
