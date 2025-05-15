@@ -1,32 +1,65 @@
 
-<p>
-  <p align="center">
-     <img width="50%"  src="https://user-images.githubusercontent.com/61549744/188870578-8eaf5803-95b8-49cd-9df1-2ea2bffb2621.gif" />
-    <p/>
-</p>
+<h1 align="center">Hi, I'm Iqrar Ijaz 👋</h1>
 
-
-
-### 📊 My Statistics
-<br/>
 <p align="center">
-  <a href="https://abhigyantrips.dev/">
-    <img width="100%" src="https://github-readme-streak-stats.herokuapp.com/?user=iqrarijaz&theme=algolia&hide_border=true" />
-  </a>
+  Software Engineer | Backend Developer | Node.js Specialist  
+  <br />
+  <a href="https://www.iqrarijaz.com">🌐 www.iqrarijaz.com</a> • 
+  <a href="https://www.linkedin.com/in/iqrarijaz">LinkedIn</a> • 
+  <a href="https://github.com/iqrarijaz">GitHub</a>
 </p>
-<br>
 
+---
 
+### 🚀 About Me
 
+I’m a Software Engineering graduate with **3+ years of full-stack experience**, currently focused on building robust, scalable, and secure backend systems using **Node.js**, **TypeScript**, and **MongoDB**.
 
- ### ⚙️ &nbsp;GitHub Analytics
+- 🧠 Love solving real-world problems with clean architecture & automation.
+- 🔧 Built production-ready systems in insurance, healthcare, and location services.
+- ☁️ Experienced with cloud deployments (AWS EC2), Redis, Stripe, and CI/CD.
+- 📈 Passionate about building scalable services and developer-first APIs.
+
+---
+
+### 🛠️ Tech Stack
+
+**Languages & Runtime:** JavaScript, TypeScript, Node.js  
+**Frameworks:** NestJS, Express.js, React.js  
+**Databases:** MongoDB (Aggregation), SQL, Redis  
+**Tools & Services:** Stripe, Google Maps, Twilio, Auth0, Docker, AWS, CI/CD  
+**Others:** WebSockets, Cron Jobs, RBAC, REST APIs, Git
+
+---
+
+### 📂 Featured Projects
+
+| Project | Type | Stack | Description |
+|--------|------|-------|-------------|
+| [Discount Storage Insurance](https://www.discountstorageinsurance.com/) | Backend | Node.js, MongoDB, Stripe | Insurance platform with payment processing, user auth, and admin tools |
+| [Storage Watch](https://storagewatch-frontend.vercel.app/) | Full Stack | Node.js, React, MongoDB | A monitoring app for inventory/storage usage with analytics |
+| [Family Locator App](http://207.180.205.16/) | Backend | Express, MongoDB, Socket.io | Real-time GPS location tracker with notifications and geofencing |
+| [CMS System (Self-learning)](https://github.com/iqrarijaz) | Full Stack | Node.js, Next.js | Modular CMS with role-based permissions, app settings, and email templates |
+
+> Explore more at: [www.iqrarijaz.com](https://www.iqrarijaz.com)
+
+---
+
+### 📊 GitHub Stats
+
 <p align="center">
-<a href="https://github.com/iqrarijaz">
-  <img height="50%" src="https://github-readme-stats-eight-theta.vercel.app/api?username=iqrarijaz&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
-</a>
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=iqrarijaz&show_icons=true&theme=algolia&count_private=true" />
+  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=iqrarijaz&theme=algolia&hide_border=true" />
 </p>
 
- 
-### ⚡ Recent GitHub Activity
-  <br/>
-   <a href="https://github.com/iqrarijaz"><img alt="Iqrar's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=iqrarijaz&custom_title=Iqrar's%20Contribution%20Graph&theme=react-dark" />
+---
+
+### 🤝 Let’s Connect
+
+I'm open to freelance or full-time backend roles at **product-based companies** where I can contribute to scalable, API-driven systems.
+
+📫 Email: **iqrarijaz788@gmail.com**
+
+---
+
+> 🔗 [www.iqrarijaz.com](https://www.iqrarijaz.com) • [LinkedIn](https://www.linkedin.com/in/iqrarijaz) • [GitHub](https://github.com/iqrarijaz)
