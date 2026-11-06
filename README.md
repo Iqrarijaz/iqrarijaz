@@ -32,9 +32,9 @@ am a backend engineer first.
 
 **Software Engineer** — AKSA Business Technologies (JazzCash team) · *Apr 2025 – Present*
 Node.js and TypeScript microservices for a national fintech platform. Express services behind
-an API gateway handling high-volume financial workflows; asynchronous transaction processing
-over Kafka with Redis caching; MongoDB aggregation pipelines and compound indexes for
-reporting and ledger operations.
+an API gateway handling millions of daily financial transactions; asynchronous transaction
+processing over Kafka with Redis caching, raising throughput 3× at 99.99% availability;
+MongoDB aggregation pipelines and compound indexes for reporting and ledger operations.
 `Node.js` `TypeScript` `Express` `Kafka` `Redis` `MongoDB`
 
 **Full Stack Engineer** — Vizz Web Solutions · *Jul 2023 – Mar 2025*
