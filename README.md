@@ -63,7 +63,7 @@ after it goes live.
 <tr>
 <td width="50%" valign="top">
 
-<img src="https://raw.githubusercontent.com/Iqrarijaz/iqrarijaz/main/assets/vantrace.png" width="44" align="left" hspace="12" alt=""/>
+<img src="assets/vantrace.png" width="44" align="left" hspace="12" alt=""/>
 
 ### VantaTrace
 
@@ -81,7 +81,7 @@ Error tracking, distributed tracing and telemetry that stays off the request pat
 </td>
 <td width="50%" valign="top">
 
-<img src="https://raw.githubusercontent.com/Iqrarijaz/iqrarijaz/main/assets/rehbar.png" width="44" align="left" hspace="12" alt=""/>
+<img src="assets/rehbar.png" width="44" align="left" hspace="12" alt=""/>
 
 ### Rehbar
 
@@ -100,7 +100,7 @@ Directory, peer-to-peer trading, blood-donation calls, storm alerts and prayer t
 <tr>
 <td width="50%" valign="top">
 
-<img src="https://raw.githubusercontent.com/Iqrarijaz/iqrarijaz/main/assets/orbit-scan.png" width="44" align="left" hspace="12" alt=""/>
+<img src="assets/orbit-scan.png" width="44" align="left" hspace="12" alt=""/>
 
 ### ScanOrbit
 
@@ -117,7 +117,7 @@ Private repositories — walkthrough on request
 </td>
 <td width="50%" valign="top">
 
-<img src="https://raw.githubusercontent.com/Iqrarijaz/iqrarijaz/main/assets/dastak.png" width="44" align="left" hspace="12" alt=""/>
+<img src="assets/dastak.png" width="44" align="left" hspace="12" alt=""/>
 
 ### Dastak
 
