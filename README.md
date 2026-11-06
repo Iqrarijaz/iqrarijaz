@@ -43,7 +43,7 @@ checkout logic into standalone services, and analytics/invoicing modules with Re
 Deployed and maintained on AWS EC2.
 `Node.js` `MongoDB` `Redis` `Stripe` `AWS EC2` `React`
 
-**MERN Stack Developer** — Digital Sensei Technologies · *Jun 2022 – Jul 2023*
+**Node.js Developer** — Digital Sensei Technologies · *Jul 2022 – Jun 2023*
 Started as an intern and moved into backend work: REST API design and documentation,
 request validation, Redis-backed rate limiting, and multi-document MongoDB transactions.
 `Node.js` `Express` `MongoDB` `React` `Swagger`
