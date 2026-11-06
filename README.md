@@ -1,98 +1,100 @@
-<h1 align="center">Iqrar Ijaz</h1>
+<div align="center">
 
-<p align="center"><b>Backend Software Engineer</b></p>
+# Iqrar Ijaz
 
-<p align="center">
-  Node.js · TypeScript · Distributed Systems · Fintech<br/>
-  Islamabad, Pakistan — open to remote (UTC+5) and relocation
-</p>
+**Backend Software Engineer** — Node.js · TypeScript · Distributed Systems · Fintech
 
-<p align="center">
-  <a href="https://www.iqrarijaz.com">Portfolio</a> ·
-  <a href="https://www.linkedin.com/in/iqrarijaz">LinkedIn</a> ·
-  <a href="https://www.npmjs.com/package/@vantatrace/sdk">npm</a> ·
-  <a href="mailto:iqrarijaz788@gmail.com">Email</a>
-</p>
+[![npm](https://img.shields.io/npm/v/@vantatrace/sdk?style=flat-square&logo=npm&label=%40vantatrace%2Fsdk&color=CB3837)](https://www.npmjs.com/package/@vantatrace/sdk)
+![Node](https://img.shields.io/badge/Node.js-16%2B-339933?style=flat-square&logo=node.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Islamabad](https://img.shields.io/badge/Islamabad,%20PK-remote%20UTC%2B5-444?style=flat-square)
 
----
+[**Portfolio**](https://www.iqrarijaz.com) · [**LinkedIn**](https://www.linkedin.com/in/iqrarijaz) · [**npm**](https://www.npmjs.com/package/@vantatrace/sdk) · [**Email**](mailto:iqrarijaz788@gmail.com)
 
-I build and operate backend services for payment-grade systems at **JazzCash**, and I
-write the **[@vantatrace/sdk](https://www.npmjs.com/package/@vantatrace/sdk)** observability
-SDK for Node.js in the open.
-
-Most of my day is Node.js and TypeScript behind an API gateway — microservices, queues,
-caching and the data modelling underneath them. Outside work I design and ship complete
-products on my own: an observability platform and a community app that is live on the
-Play Store. I also build mobile clients in React Native when a product needs one, but I
-am a backend engineer first.
+</div>
 
 ---
 
-## Experience
-
-**Software Engineer** — AKSA Business Technologies (JazzCash team) · *Apr 2025 – Present*
-Node.js and TypeScript microservices for a national fintech platform. Express services behind
-an API gateway handling millions of daily financial transactions; asynchronous transaction
-processing over Kafka with Redis caching, raising throughput 3× at 99.99% availability;
-MongoDB aggregation pipelines and compound indexes for reporting and ledger operations.
-`Node.js` `TypeScript` `Express` `Kafka` `Redis` `MongoDB`
-
-**Full Stack Engineer** — Vizz Web Solutions · *Jul 2023 – Mar 2025*
-Payment gateway work, authentication and role-based access control, decoupling monolithic
-checkout logic into standalone services, and analytics/invoicing modules with Redis caching.
-Deployed and maintained on AWS EC2.
-`Node.js` `MongoDB` `Redis` `Stripe` `AWS EC2` `React`
-
-**Node.js Developer** — Digital Sensei Technologies · *Jul 2022 – Jun 2023*
-Started as an intern and moved into backend work: REST API design and documentation,
-request validation, Redis-backed rate limiting, and multi-document MongoDB transactions.
-`Node.js` `Express` `MongoDB` `React` `Swagger`
-
-> Work at my employers is private. The descriptions above stay at the level of
-> responsibilities and technologies — no internal architecture, endpoints or data.
+|  |  |
+| :-- | :-- |
+| **Now** | Backend engineer at **JazzCash** — Node.js/TypeScript microservices on a national payments platform |
+| **Building** | **VantaTrace** — observability platform for Node.js; SDK public on npm |
+| **Shipped** | **Rehbar** (live on Play Store) · **ScanOrbit** (on-device PDF scanner & encrypted vault) |
+| **Depth in** | Microservices · async queues · caching · data modelling · observability |
+| **Open to** | Backend / platform roles — remote (UTC+5) or relocation |
 
 ---
 
-## VantaTrace — observability platform for Node.js
+## Products
 
-[vantatrace.com](https://www.vantatrace.com) · SDK: **[github.com/Iqrarijaz/vantatrace_sdk](https://github.com/Iqrarijaz/vantatrace_sdk)** · [npm](https://www.npmjs.com/package/@vantatrace/sdk)
+<table>
+<tr>
+<td width="33%" valign="top" align="center">
 
-[![npm](https://img.shields.io/npm/v/@vantatrace/sdk.svg)](https://www.npmjs.com/package/@vantatrace/sdk)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Iqrarijaz/vantatrace_sdk)
-[![node](https://img.shields.io/badge/node-%3E%3D16-339933.svg)](https://github.com/Iqrarijaz/vantatrace_sdk)
+<img src="https://www.iqrarijaz.com/images/projects/vantrace/icon.png" width="54" alt="VantaTrace"/>
 
-**The problem.** General-purpose APM agents instrument the request path directly, so every
-request pays a latency tax for telemetry it may never need. And errors a service already
-handles inside a `try/catch` never reach an error handler at all — they are invisible to
-most tools even though they are often the ones that matter.
+### VantaTrace
 
-**The approach.** The SDK captures context synchronously in memory and hands dispatch off
-the request path, so instrumentation does not sit between a request and its response.
-Events are fingerprinted by name, message and stack shape so repeat failures group into one
-issue instead of flooding a dashboard, and redaction of passwords, tokens, cookies and card
-data runs by default before anything leaves the process.
+Observability platform for Node.js — error tracking, tracing, telemetry
 
-**What I built:**
+[![npm](https://img.shields.io/npm/v/@vantatrace/sdk?style=flat-square&label=npm&color=CB3837)](https://www.npmjs.com/package/@vantatrace/sdk)
 
-- **Capture layer** — Express middleware pair built on `AsyncLocalStorage` for request
-  context, plus Fastify and NestJS adapters, Winston and Pino patches, console and outbound
-  HTTP breadcrumbs, and global handlers for uncaught exceptions and unhandled rejections.
-- **`try/catch` recovery** — a failed-request safety net, an opt-in V8-inspector watcher for
-  development, and an optional Babel plugin that injects capture calls at build time, so
-  handled errors are recoverable in production with no runtime cost.
-- **Transport** — batched and gzipped delivery with retry, backpressure ceilings, connection
-  pooling, and a kill-switch that stops sending if the project key is disabled.
-- **Rate limiting** — global and per-fingerprint caps against event storms, with a visible
-  summary of what was actually dropped rather than silent loss.
-- **Distributed tracing** — W3C Trace Context `traceparent` extraction and propagation, so a
-  trace survives a hop between services instead of restarting.
-- **Packaging** — written in TypeScript with shipped declarations, a genuine dual CJS/ESM
-  build verified at build time rather than interop shims, and 16 test files run on the
-  Node.js built-in test runner.
+`TypeScript` `ClickHouse` `BullMQ` `Next.js`
 
-Platform side (private repositories): ingestion and queueing on **Redis + BullMQ**, event
-storage and querying in **ClickHouse**, and a **Next.js** dashboard for issues, traces and
-per-route latency.
+[Site](https://www.vantatrace.com) · [SDK source](https://github.com/Iqrarijaz/vantatrace_sdk) · [npm](https://www.npmjs.com/package/@vantatrace/sdk)
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<img src="https://www.iqrarijaz.com/images/projects/orbit-scan/icon.png" width="54" alt="ScanOrbit"/>
+
+### ScanOrbit
+
+On-device PDF scanner with ML-Kit OCR and a biometric encrypted vault
+
+![private](https://img.shields.io/badge/repos-private-6e7681?style=flat-square)
+
+`React Native` `Skia` `ML-Kit` `SQLite`
+
+Private repositories — walkthrough on request
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<img src="https://www.iqrarijaz.com/images/projects/rehbar/icon.png" width="54" alt="Rehbar"/>
+
+### Rehbar
+
+Hyperlocal community platform — directory, trading, alerts, utilities
+
+[![Play Store](https://img.shields.io/badge/Play_Store-live-3DDC84?style=flat-square&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=com.rehbar.community)
+
+`Expo` `Node.js` `MongoDB` `Firebase`
+
+[Site](https://www.rehbarapp.com) · [App source](https://github.com/Iqrarijaz/mehnda-chinji-mobile-app)
+
+</td>
+</tr>
+</table>
+
+<details>
+<summary><b>VantaTrace — how it works</b> &nbsp;·&nbsp; <sub>SDK architecture, transport, tracing, honest status</sub></summary>
+
+<br/>
+
+**The problem.** APM agents instrument the request path, so every request pays a latency tax for telemetry it may never need. Worse, errors a service already handles inside `try/catch` never reach an error handler — invisible to most tools, and often the ones that matter.
+
+**The approach.** Capture context synchronously in memory, hand dispatch off the request path. Fingerprint events by name, message and stack shape so repeat failures group into one issue. Redact secrets before anything leaves the process.
+
+| Layer | What I built | Stack |
+| :-- | :-- | :-- |
+| **Capture** | Express middleware pair on `AsyncLocalStorage`; Fastify and NestJS adapters; Winston/Pino patches; console + outbound-HTTP breadcrumbs; global handlers for uncaught exceptions and rejections | `TypeScript` |
+| **`try/catch` recovery** | Failed-request safety net, opt-in V8-inspector watcher for dev, and a Babel plugin injecting capture at build time — handled errors recoverable in production at zero runtime cost | `Babel` |
+| **Transport** | Batched, gzipped delivery with retry, backpressure ceilings, connection pooling, and a kill-switch when the project key is disabled | `Node.js` |
+| **Rate limiting** | Global and per-fingerprint caps against event storms, with a visible summary of what was dropped rather than silent loss | — |
+| **Tracing** | W3C Trace Context `traceparent` extraction and propagation, so a trace survives a hop between services | — |
+| **Packaging** | Genuine dual CJS/ESM build verified at build time (not interop shims), shipped `.d.ts`, 16 test files on the Node.js built-in runner | `tsup` |
+| **Platform** *(private)* | Ingestion and queueing on Redis + BullMQ, event storage and querying in ClickHouse, Next.js dashboard for issues, traces and per-route latency | `ClickHouse` `BullMQ` `Next.js` |
 
 ```bash
 npm install @vantatrace/sdk
@@ -109,72 +111,91 @@ app.use(vantaTrace.requestHandler());  // top of the stack
 app.use(vantaTrace.errorHandler());    // bottom of the stack
 ```
 
-**Status — read this before judging it.** `@vantatrace/sdk` is at **v0.5.x** across 12
-published versions and is MIT licensed. It is early-stage software: I have no third-party
-adoption to point to, the repository has no CI pipeline yet, and the ingestion backend,
-dashboard and mobile client are private rather than open source. The SDK itself is public
-and readable end to end.
+> **Status, stated plainly.** `v0.5.x` across 12 published versions, MIT licensed. Early-stage: no third-party adoption to point to, no CI pipeline in the repository yet, and the ingestion backend, dashboard and mobile client are private rather than open source. The SDK itself is public and readable end to end.
+
+</details>
+
+<details>
+<summary><b>ScanOrbit — how it works</b> &nbsp;·&nbsp; <sub>on-device CV pipeline, encrypted vault, zero-knowledge sync</sub></summary>
+
+<br/>
+
+**The problem.** Commercial scanners are ad-laden, send private paperwork to third-party servers, and charge subscriptions for basic PDF export. The fix is to keep the whole pipeline on the device.
+
+| Layer | What I built | Stack |
+| :-- | :-- | :-- |
+| **Capture** | Native document-scanner module doing perspective warping and polygon corner detection on the live camera feed | `React Native` `Reanimated` |
+| **Enhancement** | GPU-accelerated Skia shaders for real-time Magic Color, high-contrast B&W and shadow removal | `Shopify Skia` `Nitro Modules` |
+| **OCR** | Google ML-Kit text recognition running entirely on-device — no upload, works offline | `ML-Kit` |
+| **PDF engine** | Streaming multi-page PDF generation, Docx conversion and lossless image compression, client-side | `@cantoo/pdf-lib` `JSZip` |
+| **Vault** | Sensitive documents behind biometric auth, encrypted with hardware-backed key storage | `Expo SecureStore` `@noble/ciphers` |
+| **Index** | Local document catalogue with tag filtering, page-count indexing and full-text search | `Expo SQLite` `MMKV` |
+| **Sync** | Zero-knowledge E2EE backup using client-derived keys and presigned object storage — multi-device sync without exposing documents | `AWS S3 / GCS` |
+| **Release** | EAS cloud builds and store submission, Crashlytics for crash and performance diagnostics | `Expo EAS` `Fastlane` |
+
+> **Status.** Four private repositories — mobile app, backend, admin portal and landing site. Nothing public to link; happy to walk through the architecture on request.
+
+</details>
+
+<details>
+<summary><b>Rehbar — how it works</b> &nbsp;·&nbsp; <sub>offline-first client, domain API layer, live on Play Store</sub></summary>
+
+<br/>
+
+**The problem.** A village needs a directory, a marketplace, blood-donation calls, weather warnings and prayer times — and gets none of them in one place, on connections that drop constantly.
+
+| Layer | What I built | Stack |
+| :-- | :-- | :-- |
+| **Client** | Offline-first app: TanStack Query persisted to AsyncStorage, so cached data survives a cold start on an unreliable rural connection | `React Native` `Expo` `Zustand` |
+| **Domains** | Client organised by domain — `business`, `posts`, `chat`, `bloodDonation`, `essentials`, `notifications`, `currency`, `metals` | `expo-router` |
+| **Backend** | v1 shipped on Firebase, then rebuilt on a Node.js/TypeScript API with MongoDB, Redis and BullMQ; FCM retained for push | `Node.js` `MongoDB` `Redis` `BullMQ` |
+| **Delivery** | Firebase Cloud Messaging for alerts, Remote Config for server-controlled rollout, SecureStore for credentials | `Firebase` |
+
+> **Status.** Android live on the Play Store; iOS not shipped yet. The mobile client and admin frontend are public, the backend is private.
+
+</details>
 
 ---
 
-## Rehbar — hyperlocal community platform
+## Experience
 
-[rehbarapp.com](https://www.rehbarapp.com) · [Play Store](https://play.google.com/store/apps/details?id=com.rehbar.community) · Mobile client: **[github.com/Iqrarijaz/mehnda-chinji-mobile-app](https://github.com/Iqrarijaz/mehnda-chinji-mobile-app)**
+| Role | Where | Period | Focus |
+| :-- | :-- | :-- | :-- |
+| **Software Engineer** | AKSA Business Technologies *(JazzCash team)* | Apr 2025 – Present | Node.js/TypeScript microservices behind an API gateway handling millions of daily financial transactions; Kafka queues and Redis caching raising throughput 3× at 99.99% availability; MongoDB aggregation pipelines for reporting and ledger operations |
+| **Full Stack Engineer** | Vizz Web Solutions | Jul 2023 – Mar 2025 | Payment gateway work, auth and RBAC, decoupling monolithic checkout into standalone services, analytics and invoicing modules with Redis caching, deployed on AWS EC2 |
+| **Node.js Developer** | Digital Sensei Technologies | Jul 2022 – Jun 2023 | REST API design and documentation, request validation, Redis-backed sliding-window rate limiting, multi-document MongoDB transactions |
 
-A community app for rural Punjab, built end to end and shipped to the Play Store. It
-bundles the services a village actually asks for into one client: a local business
-directory, peer-to-peer listings, blood-donation requests, chat, hyperlocal weather and
-storm alerts, prayer times, and currency and metal rates.
+<sub>Employer work is private. Descriptions stay at the level of responsibilities and technologies — no internal architecture, endpoints or data.</sub>
 
-**Engineering notes:**
+---
 
-- **Offline-first client** — React Native on Expo with TanStack Query persisted to
-  AsyncStorage, so cached data survives a cold start on an unreliable rural connection.
-- **Modular API layer** — the client is organised by domain (`business`, `posts`, `chat`,
-  `bloodDonation`, `essentials`, `notifications`, `currency`, `metals`) against a Node.js
-  backend I also wrote.
-- **Delivery** — Firebase Cloud Messaging for push and alerts, Firebase Remote Config for
-  server-controlled rollout, Zustand for client state, Expo SecureStore for credentials.
+## Stack
 
-Android is live; iOS is not shipped yet. The mobile client and admin frontend are public;
-the backend is private.
+| | |
+| :-- | :-- |
+| **Daily, in production** | `Node.js` `TypeScript` `Express` `NestJS` `MongoDB` `PostgreSQL` `Redis` `REST` |
+| **Shipped with** | `Kafka` `BullMQ` `ClickHouse` `Docker` `Nginx` `AWS (EC2, S3)` `GitHub Actions` `Next.js` `React Native / Expo` |
+| **Working knowledge** | `Prometheus` `Grafana` `Fastify` `PostGIS` `WebSockets` `Stripe` |
+| **Practices** | Microservice decomposition · async queues and workers · caching strategy · idempotency and retries · rate limiting · structured logging and observability · indexing and aggregation pipelines |
 
 ---
 
 ## Also built
 
 | Project | What it is | Status |
-| --- | --- | --- |
-| Document scanner suite | On-device scanning and OCR, PDF compilation backend, admin portal, landing site | Private repositories |
-| Dairy management platform | Backend, merchant app, customer app and web frontend | Private repositories |
-| [Personal portfolio](https://www.iqrarijaz.com) | Next.js 14 site with long-form engineering case studies | Live, private repository |
+| :-- | :-- | :-- |
+| **Dastak** | Multi-role doorstep delivery platform — FSM order lifecycle, proximity dispatch, pessimistic row locking against double-assignment | Private |
+| **Dairy management suite** | Backend, merchant app, customer app, web frontend | Private |
+| **[Portfolio](https://www.iqrarijaz.com)** | Next.js 14 site with long-form engineering case studies | Live |
 
 ---
 
-## Technical expertise
+<div align="center">
 
-**Daily, in production** — Node.js · TypeScript · Express · NestJS · MongoDB · PostgreSQL · Redis · REST API design
+**BS Software Engineering** — Bahria University, Islamabad · 2018 – 2022
 
-**Shipped with** — Kafka · BullMQ · ClickHouse · Docker · Nginx · AWS (EC2, S3) · GitHub Actions · React Native (Expo) · Next.js · React
+[Portfolio](https://www.iqrarijaz.com) · [LinkedIn](https://www.linkedin.com/in/iqrarijaz) · [iqrarijaz788@gmail.com](mailto:iqrarijaz788@gmail.com)
 
-**Working knowledge** — Prometheus · Grafana · Fastify · PostGIS · WebSockets · Stripe
+<sub>Open to backend and platform roles at product companies — remote, or relocation.</sub>
 
-**Practices** — microservice decomposition · async queues and background workers · caching
-strategy · idempotency and retries · rate limiting · observability and structured logging ·
-database indexing and aggregation pipelines
-
----
-
-## Education
-
-**BS Software Engineering** — Bahria University, Islamabad · *2018 – 2022*
-
----
-
-## Contact
-
-- Portfolio — [www.iqrarijaz.com](https://www.iqrarijaz.com)
-- LinkedIn — [linkedin.com/in/iqrarijaz](https://www.linkedin.com/in/iqrarijaz)
-- Email — [iqrarijaz788@gmail.com](mailto:iqrarijaz788@gmail.com)
-
-Open to backend and platform roles at product companies — remote, or relocation.
+</div>
